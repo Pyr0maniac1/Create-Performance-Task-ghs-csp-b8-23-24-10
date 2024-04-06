@@ -3,9 +3,10 @@ class Card {
         this.value = value;
         this.suit = suit;
     }
-
-
-
+    getCardsString(){
+        return `${this.value} of ${this.suit}`;
+    
+    }
 }
     class Deck {
         constructor(){
@@ -34,10 +35,12 @@ class Card {
             [this.Cards[i], this.Cards[j]] = [this.Cards[j], this.Cards[i]];  
         }
     };
-
+    
     deal(){
-        return this.Cards.pop();
+    return this.Cards.pop();
     }
 }
+
+
 
 
