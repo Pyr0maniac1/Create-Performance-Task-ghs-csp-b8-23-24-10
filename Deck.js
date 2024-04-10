@@ -10,7 +10,7 @@ class Card {
 }
     class Deck {
         constructor(){
-            this.Cards = [];  
+            this.cards = [];  
             this.reset(); 
             this.shuffle(); 
         }

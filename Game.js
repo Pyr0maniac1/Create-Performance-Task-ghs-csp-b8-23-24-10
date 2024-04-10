@@ -1,13 +1,19 @@
-import { Card, Deck, cards } from './Deck.js'; 
+const {Card, Deck} = require('./Deck.js');
 
 
-class texasHoldem {
+class  TexasHoldEm {
     constructor() {
         this.deck = new Deck();
-        this.playersCards = [[],[]];
-
+        this.player[ 
+            {cards: [], chips: startChips, bet:0, fold: false}
+        ];
+        this.board =[]; 
+        this.pot = 0; 
     }
-
+   
+   
+   
+   
     deal(){ 
         for(player of this.playersCards.length){ 
             for(let i = 0; i < 2; i++){ 
@@ -15,15 +21,43 @@ class texasHoldem {
             }
         }
     }
-}; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     bettingRound() {
         this.players.forEach((player, index) => {
             if (!player.fold) {
                 const betAmount = this.promptPlayerBet(index);
                 if (betAmount > player.chips) {
-                    console.log(`Player ${index + 1} does not have enough chips and is all-in!`)
-                    // FIXXXXXX NEEED SIDE BET 
+                    // console.log(`Player ${index + 1} does not have enough chips and is all-in!`)
                     player.bet = player.chips;
                     player.chips = 0;
                 } else {
@@ -47,3 +81,5 @@ class texasHoldem {
             }
         }
     }
+}; 
+}
