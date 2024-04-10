@@ -22,22 +22,22 @@ class Card {
         
         for(let suit of suits){ 
             for(let value of values){ 
-                this.Cards.push(new Card(value, suit)); 
+                this.cards.push(new Card(value, suit)); 
             }
         }
     } 
 
     shuffle(){
-        var i = this.Cards.length; 
+        var i = this.cards.length; 
         while(i != 0){ 
             var j = Math.floor(Math.random() * i);
             i--; 
-            [this.Cards[i], this.Cards[j]] = [this.Cards[j], this.Cards[i]];  
+            [this.cards[i], this.cards[j]] = [this.cards[j], this.cards[i]];  
         }
     };
     
     deal(){
-    return this.Cards.pop();
+    return this.cards.pop();
     }
 }
 
