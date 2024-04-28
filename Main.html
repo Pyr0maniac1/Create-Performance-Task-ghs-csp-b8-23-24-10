@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texas Hold'em Game</title>
+</head>
+<body>
+    <h1>Texas Hold'em Poker</h1>
+    <button onclick="startGame()">Start Game</button>
+    <script src="TexasHoldEm.js"></script>
+    <script>
+        // This function will start the game by creating a new instance of TexasHoldEm
+        function startGame() {
+            const game = new TexasHoldEm(4); // Number of players
+            game.start();
+        }
+    </script>
+</body>
+</html>
